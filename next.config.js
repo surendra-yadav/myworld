@@ -16,7 +16,7 @@ module.exports = {
       'secure.gravatar.com',
     ],
   },
-  
+}
   async redirects() {
     return [      
       {
@@ -33,4 +33,4 @@ module.exports = {
       }
     ]
   },
-}
+
