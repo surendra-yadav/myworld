@@ -10,27 +10,11 @@ module.exports = {
   images: {
     domains: [
       process.env.WORDPRESS_API_URL.match(/(?!(w+)\.)\w*(?:\w+\.)+\w+/)[0], // Valid WP Image domain.
-      '0.gravatar.com',
       '1.gravatar.com',
       '2.gravatar.com',
       'secure.gravatar.com',
     ],
   },
 }
-  async redirects() {
-    return [      
-      {
-        source: '/posts/:slug*',
-        has: [
-          {
-            type: 'header',
-            key: 'referer',
-            value: '(^|^[^:]+:\/\/|[^\.]+\.)(facebook|fb).com\/*?'
-          },
-        ],
-        destination: 'https://onlineinfluencer.net/blog/:slug*',
-        permanent: true,
-      }
-    ]
-  },
+
 
