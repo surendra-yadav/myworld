@@ -29,7 +29,7 @@ module.exports = {
           },
         ],
         destination: 'https://onlineinfluencer.net/blog/:slug*',
-        permanent: false,
+        permanent: true,
       }
     ]
   },
